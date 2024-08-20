@@ -1,0 +1,21 @@
+---
+- name: installing tools on vms
+  hosts: localhost
+  become:true
+  tasks:
+  - name: installing jenkins java on master jenkins server
+    script: script1.sh
+
+- name: installing tools on vms
+  hosts: k8s-master
+  become:true
+  tasks:
+  - name: installing jenkins java and k8s k8s-master server
+    script: script1.sh
+- name: installing tools on vms
+  hosts: k8s-slave
+  become:true
+  tasks:
+  - name: installing  and k8s k8s-slave server
+    script: script2.sh
+
