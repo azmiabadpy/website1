@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: capstone2-project
-        image: azmiabad/capstone2
+        image: azmiabad/capstone2:latest
         ports:
         - containerPort: 80
