@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: capsone-project-deployment
+  labels:
+    app: capstone2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: capstone2
+  template:
+    metadata:
+      labels:
+        app: capstone2
+    spec:
+      containers:
+      - name: capstone2-project
+        image: azmiabad/capstone2
+        ports:
+        - containerPort: 80
