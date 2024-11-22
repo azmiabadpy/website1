@@ -7,13 +7,13 @@
     script: script1.sh
 
 - name: installing tools on vms
-  hosts: k8s-master
+  hosts: k8s-m
   become:true
   tasks:
   - name: installing jenkins java and k8s k8s-master server
     script: script1.sh
 - name: installing tools on vms
-  hosts: k8s-slave
+  hosts: k8s-s
   become:true
   tasks:
   - name: installing  and k8s k8s-slave server
