@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: capsone-project-deployment
   labels:
-    app: capstone2
+    app: devops
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
-      app: capstone2
+      app: devops
   template:
     metadata:
       labels:
-        app: capstone2
+        app: devops
     spec:
       containers:
-      - name: capstone2-project
-        image: azmiabad/capstone2:latest
+      - name: devops-project
+        image: azmiabad/devops:latest
         ports:
         - containerPort: 80
