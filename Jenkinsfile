@@ -7,7 +7,7 @@ pipeline {
                 label 'master'
             }
             steps {
-                git url: 'https://github.com/azmiabadpy/website1.git', branch: 'master'
+                git url: 'https://github.com/azmiabadpy/Website-PRT-ORG.git', branch: 'master'
             }
         }
         
@@ -16,11 +16,11 @@ pipeline {
                 label 'master'
             }
             steps {
-                sh 'sudo docker build --no-cache /home/ubuntu/jenkins/workspace/job1 -t azmiabad/capstone2'
+                sh 'sudo docker build --no-cache /home/ubuntu/jenkins/workspace/job1 -t azmiabad/devops'
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'username', passwordVariable: 'password')]) {
                     sh 'sudo docker login -u ${username} -p ${password}'
                 }
-                sh 'sudo docker push azmiabad/capstone2'
+                sh 'sudo docker push azmiabad/capstonedevops'
             }
         }
         
