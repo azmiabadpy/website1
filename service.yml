@@ -6,7 +6,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-     app: capstone2
+     app: devops
   ports:
     - port: 80
       targetPort: 80
