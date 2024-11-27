@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install openjdk-17-jre
+sudo apt install fontconfig openjdk-17-jre
 sudo swapoff -a
 
 # Create the .conf file to load the modules at bootup
